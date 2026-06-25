@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# Secrets
+.env
+
+# Data
+*.db
+*.db-wal
+*.db-shm
