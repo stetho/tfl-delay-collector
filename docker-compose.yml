@@ -1,0 +1,15 @@
+services:
+  tfl-delay-collector:
+    image: registry.stetho.me/tfl-delay-collector:latest
+    container_name: tfl-delay-collector
+    restart: unless-stopped
+    environment:
+      TFL_API_KEY: ${TFL_API_KEY}
+      RTT_USER: ${RTT_USER}
+      RTT_PASS: ${RTT_PASS}
+      DB_PATH: /data/delays.db
+    volumes:
+      - tfl-delay-data:/data
+
+volumes:
+  tfl-delay-data:
